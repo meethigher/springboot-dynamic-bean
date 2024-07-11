@@ -6,7 +6,7 @@ proxy:
   targetUrl: https://cn.bing.com
 logging:
   level:
-    root: info
+    root: error
     top.meethigher: info
     # 验证所有bean的加载顺序
-    org.springframework.beans.factory: error
+    org.springframework.beans.factory: debug

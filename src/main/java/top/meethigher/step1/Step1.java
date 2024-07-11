@@ -23,8 +23,8 @@ public class Step1 {
         for (Class<?> aClass : list) {
             array[list.indexOf(aClass)] = aClass.getSimpleName();
         }
-        log.info("springboot启动后，先初始化Environment，再初始化ApplicationContext");
-        log.info("这两个参数在注入时，一定不会为空的");
-        log.info("默认情况下的加载顺序如下\n{}", String.join(" > ", array));
+        log.info("springboot 启动后，先初始化 Environment ，再初始化 ApplicationContext ，可以通过注册 ApplicationListener 验证");
+        log.info("Environment 和 ApplicationContext 在注入时，一定不会为空的");
+        log.info("测试中这三个 Bean 默认情况下的加载顺序如下\n{}", String.join(" > ", array));
     }
 }
