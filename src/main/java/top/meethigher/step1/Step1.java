@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 @SpringBootApplication(scanBasePackages = "top.meethigher.step1")
 @Slf4j
@@ -26,5 +28,12 @@ public class Step1 {
         log.info("springboot 启动后，先初始化 Environment ，再初始化 ApplicationContext ，可以通过注册 ApplicationListener 验证");
         log.info("Environment 和 ApplicationContext 在注入时，一定不会为空的");
         log.info("测试中这三个 Bean 默认情况下的加载顺序如下\n{}", String.join(" > ", array));
+        log.error("验证错误日志", new RuntimeException("嘎嘎"));
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                log.info("嘎嘎");
+            }
+        }, 0, 1000L);
     }
 }

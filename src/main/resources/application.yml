@@ -5,6 +5,8 @@ proxy:
   servletUrl: /*
   targetUrl: https://cn.bing.com
 logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) --- %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
   level:
     root: error
     top.meethigher: info
