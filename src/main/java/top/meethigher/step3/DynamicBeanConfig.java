@@ -40,7 +40,6 @@ public class DynamicBeanConfig implements BeanDefinitionRegistryPostProcessor, E
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-
     }
 
     @Override
